@@ -1,9 +1,13 @@
 services:
   - type: web
-    name: mern-notes-backend
+    name: pazhampori-backend
     env: node
-    buildCommand: npm install
-    startCommand: node server.js
+    region: singapore
+    plan: free
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && npm start
     envVars:
       - key: PORT
         value: 8080
+      - key: NODE_ENV
+        value: production
