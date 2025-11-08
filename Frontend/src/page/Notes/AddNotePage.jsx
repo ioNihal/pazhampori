@@ -19,7 +19,7 @@ export default function AddNotePage() {
 
     const getId = async () => {
         try {
-            const response = await fetch('http://localhost:5000/notes');
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/notes`);
             const data = await response.json();
             return data.length > 0 ? data[data.length - 1].id + 1 : 1;
         } catch (error) {
@@ -33,7 +33,7 @@ export default function AddNotePage() {
         const newId = await getId();
         const newNote = { ...note, id: newId };
         try {
-            await fetch('http://localhost:5000/notes', {
+            await fetch(`${import.meta.env.VITE_API_URL}/notes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

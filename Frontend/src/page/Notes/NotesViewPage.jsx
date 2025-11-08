@@ -13,7 +13,7 @@ export default function NotesViewPage() {
 
     const fetchNote = async (noteId) => {
         try {
-            const response = await fetch(`http://localhost:5000/notes/${noteId}`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/notes/${noteId}`);
             const data = await response.json();
             setNote(data);
         } catch (error) {
@@ -31,7 +31,7 @@ export default function NotesViewPage() {
 
     const handleDelete = async () => {
         try {
-            await fetch(`http://localhost:5000/notes/${id}`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/notes/${id}`, {
                 method: 'DELETE',
             });
         } catch (error) {

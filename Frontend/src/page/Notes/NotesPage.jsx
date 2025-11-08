@@ -12,7 +12,7 @@ export default function NotesPage() {
 
     const fetchNotes = async () => {
         try {
-            const response = await fetch('http://localhost:5000/notes');
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/notes`);
             const data = await response.json();
             setNotes(data);
         } catch (error) {
@@ -42,7 +42,7 @@ export default function NotesPage() {
             ids = notes.map(note => note.id);
         }
         try {
-            await fetch('http://localhost:5000/notes', {
+            await fetch(`${import.meta.env.VITE_API_URL}/notes`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
