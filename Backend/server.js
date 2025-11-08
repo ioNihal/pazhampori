@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = { 
     origin: [
         process.env.CORS_ORIGIN || "http://localhost:5173",
-        "https://pazhampori.vercel.app",
-        /\.vercel\.app$/  // Allow all vercel.app subdomains
+        "https://pazhampori.vercel.app"
     ],
-    optionsSuccessStatus: 200 
+    optionsSuccessStatus: 200,
+    credentials: true
 };
 
 app.use(morgan("dev"));
