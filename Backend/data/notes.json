@@ -1,0 +1,27 @@
+[
+  {
+    "id": 2,
+    "title": "Notes 2 (new)",
+    "content": "This note was added using REST Client"
+  },
+  {
+    "id": 1,
+    "title": "Notes 1 (new)",
+    "content": "This note was added using REST Client"
+  },
+  {
+    "id": 3,
+    "title": "Notes 3 (new)",
+    "content": "This note was added using REST Client"
+  },
+  {
+    "id": 4,
+    "title": "Notes 4 (new)",
+    "content": "This note was added using REST Client"
+  },
+  {
+    "id": 5,
+    "title": "Notes 5 (new)",
+    "content": "This note was added using REST Client"
+  }
+]

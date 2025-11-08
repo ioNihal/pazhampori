@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+  padding-top: 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 280px;
+  background: rgb(65, 65, 65);
+  padding: 1em;
+  border-radius: 8px;
+}
