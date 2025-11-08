@@ -1,0 +1,45 @@
+### GET request
+GET http://localhost:5000/
+
+
+### GET notes
+GET http://localhost:5000/notes
+
+
+### GET single note
+GET http://localhost:5000/notes/2
+
+
+### POST add new notes
+POST http://localhost:5000/notes
+Content-Type: application/json
+
+{
+    "id": 5,
+    "title" : "Notes 5 (new)",
+    "content" : "This note was added using REST Client"
+}
+
+### PUT update a single note
+PUT http://localhost:5000/notes/3
+Content-Type: application/json
+
+{
+    "content": "using REST Client"
+}
+
+
+### DELETE delete a single note
+DELETE http://localhost:5000/notes/3
+Content-Type: application/json
+
+
+### DELETE deletes multiple notes
+DELETE http://localhost:5000/notes
+Content-Type: application/json
+
+{
+    "ids" : []
+}
+
+
